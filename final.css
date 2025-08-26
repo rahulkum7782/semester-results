@@ -1,0 +1,95 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f2f6fc;
+}
+
+header {
+  background: #1e3a8a;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 1.8em;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.form-section {
+  background: white;
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 900px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.form-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.form-group input, .form-group select {
+  flex: 1;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.form-actions button, .form-actions input {
+  margin: 5px 5px 0 0;
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: none;
+}
+
+.form-actions button {
+  background: #1e3a8a;
+  color: white;
+  cursor: pointer;
+}
+
+.form-actions button:hover {
+  background: #3348b0;
+}
+
+.table-section {
+  margin: 20px auto;
+  max-width: 900px;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+th, td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+
+thead {
+  background: #1e3a8a;
+  color: white;
+}
+
+td[contenteditable="true"] {
+  background-color: #fef9c3;
+}
+
+td.fail { background-color: #f87171; color: white; }
+td.pass { background-color: #fde68a; }
+td.second { background-color: #60a5fa; color: white; }
+td.first { background-color: #34d399; color: white; }
+
+@media (max-width: 600px) {
+  .form-group { flex-direction: column; }
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>College Marks Entry System</title>
+  <link rel="stylesheet" href="final.css">
+  
+  <!-- jsPDF core -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <!-- jsPDF AutoTable plugin -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Academic Results</h1>
+  </header>
+
+  <section class="form-section">
+    <h2>Add New Student</h2>
+    <div class="form-group">
+      <input type="text" id="name" placeholder="Enter Name">
+      <input type="text" id="roll" placeholder="Roll No" readonly>
+      <select id="subject">
+        <option value="IWD">IWD</option>
+        <option value="Math">Math</option>
+        <option value="Physics">Physics</option>
+        <option value="Other">Other</option>
+      </select>
+      <input type="text" id="otherSubject" placeholder="Enter Subject" style="display:none;">
+      <input type="number" id="marks" placeholder="Enter Marks">
+    </div>
+    <div class="form-actions">
+      <button onclick="addStudent()">Add Student</button>
+      <button onclick="resetTable()">Reset Table</button>
+      <button onclick="downloadCSV()">Download CSV</button>
+      <button onclick="downloadPDF()">Download PDF</button>
+      <input type="text" id="deleteRoll" placeholder="Enter Roll No to Delete">
+      <button onclick="deleteByRoll()">Delete Roll No</button>
+    </div>
+  </section>
+
+  <section class="table-section">
+    <table id="studentTable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Roll No</th>
+          <th>Subject</th>
+          <th>Marks</th>
+          <th>Division</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </section>
+
+  <script src="final.js"></script>
+</body>
+</html>
